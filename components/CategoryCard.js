@@ -5,13 +5,21 @@ class CategoryCard extends HTMLElement {
     this.attachShadow({ mode: 'open' });
   }
 
-  connectedCallback() {
+  set category(category) {
+    this._category = category;
     this.render();
   }
 
+  get category() {
+    return this._category;
+  }
+
   render() {
-    const name = this.getAttribute('name');
-    const image = this.getAttribute('image');
+    if (!this.category) {
+      return;
+    }
+
+    const { name, image } = this.category;
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -66,7 +74,6 @@ class CategoryCard extends HTMLElement {
             margin: 0;
             font-size: 1.5rem;
         }
-
       </style>
       <div class="category-card">
         <a href="#">
