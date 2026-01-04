@@ -1,14 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCraftMarketing.in - Digital Product Store</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <site-header></site-header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover and Own Your Next Digital Asset</h1>
+                <p>Explore a world of digital creativity. Find unique digital products, bundles, and more.</p>
+                <a href="#products" class="cta-button">Browse Products</a>
+            </div>
+        </section>
+
+        <section id="products" class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                </div>
+        </section>
+
+        <section id="categories" class="categories">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                </div>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <script src="main.js" type="module"></script>
 </body>
 </html>
